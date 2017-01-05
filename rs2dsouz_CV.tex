@@ -2,6 +2,10 @@
 
 \usepackage{url}
 
+% ---------------------------------------------------------------------------------------------------------------------
+% General Styling
+%
+
 \pagestyle{plain}
 \makeevenfoot{plain}{}{}{}
 \makeoddfoot{plain}{}{}{}
@@ -18,6 +22,10 @@
 \setaftersecskip{1em}
 \setbeforesecskip{1em}
 
+% ---------------------------------------------------------------------------------------------------------------------
+% Document
+% 
+
 \begin{document}
 
 % General Entry Command
@@ -33,6 +41,11 @@
     \end{adjustwidth}
     \hfill
 }
+
+% Simple Entry Command (no subtitle)
+% #1 : Flush Right (Heading)
+% #2 : Flush Left (Heading)
+% #3 : Body
 \newcommand{\entrySimple}[3]{
     \textbf{#2} \sourceatright{#1}
     \begin{adjustwidth}{1em}{0em}
@@ -42,8 +55,9 @@
 }
 
 % ---------------------------------------------------------------------------------------------------------------------
+% Begin Resume
+%
 
-% Title of CV
 \LARGE{\textsc{Rollen D'Souza}}\\
 \small{\url{rs2dsouz@edu.uwaterloo.ca}~\textbullet~\url{github.com/rollends} }\\
 \rule{\linewidth}{0.4pt}
@@ -81,7 +95,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In 
     \entryGeneral{2014/05\textemdash 2014/08}{Software Development Engineer Co-op}{The Coalition Studio, Microsoft}{
         Created tools to support design and development workows in video games. Wrote rendering shaders and created 
         a background loader for the Unreal Game Engine. Contributed to \emph{Gears of War 3: Ultimate Edition} and 
-        \emph{Gears of War 4}.
+        \emph{Gears of War 4} Xbox One video games.
     }
     
     \entryGeneral{2013/09\textemdash 2013/12}{Software Development Engineer Co-op}
@@ -104,6 +118,26 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In 
         2014    &   International Genetically Engineered Machine (iGEM) Competition \textemdash~Best Model \\
         2011    &   University of Waterloo President's Scholarship \\
     \end{tabular}
+\end{adjustwidth}
+
+\section*{Activities and Projects}
+\begin{adjustwidth}{1em}{0em}%
+    \entryGeneral{2016/01\textemdash 2016/04}{Project: Real Time Operating System}{CS452, University of Waterloo}{
+        Implemented (hard) real time operating system in C, from the ground up, for the purpose of autonomously
+        managing trains on a physical track.
+    }
+
+    \entryGeneral{2015/01\textemdash 2015/12}{Math Modeller}
+    {International Genetically Engineered Machine (iGEM) Competition - Team Waterloo} {
+        Developed and analyzed mathematical models of the CRISPR-mRNA interference mechanism alongside
+        interdisciplinary team of mathematics, physics, engineering and biology undergraduate students.
+        Main contribution consisted of performing global sensitivity analysis.
+    }
+
+    \entryGeneral{2015/01\textemdash 2015/12}{Volunteer First Responder}{Campus Response Team, FEDS} {
+        Provided first aid services at student events and the student activity complex. 
+        Certified Standard First Aid/CPR-HCP.
+    }
 \end{adjustwidth}
 
 \section*{Education}
