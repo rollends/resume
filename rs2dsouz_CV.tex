@@ -2,14 +2,33 @@
 
 \usepackage{url}
 
+\pagestyle{plain}
+
 \setlength{\parindent}{0em}
-\setlength{\parskip}{1em}
+\setlength{\parskip}{0.25em}
+\setlength{\partopsep}{0em}
+
 \setheadfoot{0em}{1em}
 \setlrmarginsandblock{2.5cm}{2.5cm}{*}
 \setulmarginsandblock{2.5cm}{2.5cm}{*}
 \checkandfixthelayout
 
+\setaftersecskip{ 0em }
+
 \begin{document}
+
+% General Entry Command
+% #1 : Flush Right (Heading)
+% #2 : Flush Left (Heading)
+% #3 : Body
+\newcommand{\entryGeneral}[3]{
+    \leftspringright{0.5}{0.5}{#2}{#1}%
+    \begin{adjustwidth}{1em}{0em}%
+        #3%
+    \end{adjustwidth}
+}
+
+% ---------------------------------------------------------------------------------------------------------------------
 
 % Title of CV
 \LARGE{\textsc{Rollen D'Souza}}\\
@@ -17,15 +36,45 @@
 \rule{\textwidth}{0.4pt}
 
 \section*{Publications}
-\begin{adjustwidth}{1em}{0em}
-V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In Print]
+\begin{adjustwidth}{1em}{0em}%
+V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
+Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In Print]
 \end{adjustwidth}
 
 \section*{Academic Work Experience}
-\begin{adjustwidth}{1em}{0em}
-
+\begin{adjustwidth}{1em}{0em}%
+    \entryGeneral{2016/09\textemdash 2016/12}{\textbf{Teaching Assistant}}{
+        Assisted students in the first year SE101 course. Managed a weekly 2-hour lab section and marked weekly quiz 
+        submissions as well as a final course project. Engaged with students through Piazza and office hours.
+    }
+    
+    \entryGeneral{2016/05\textemdash 2016/08}{\textbf{Undergraduate Research Assistant}}{
+        Supervised by Prof. Dana Kuli\'{c}.
+    }
+    
+    \entryGeneral{2015/01\textemdash 2015/04}{\textbf{Undergraduate Research Assistant}}{
+        Implemented real-time inverse kinematics algorithm for human motion capture data. Supervised by Prof. 
+        Dana Kuli\'{c}.
+    }
 \end{adjustwidth}
 
 \section*{Industry Work Experience}
+\begin{adjustwidth}{1em}{0em}%
+    \entryGeneral{2015/09\textemdash 2015/12}{ 
+        \textbf{Medical Software Developer Co-op} \\ 
+        \emph{Sunnybrook Health Sciences Centre}} {
+        C++ Linux and Windows Application development.
+    }
+
+    \entryGeneral{2014/05\textemdash 2014/08}{ 
+        \textbf{Software Development Engineer Co-op} \\ 
+        \emph{Coalition Game Studio, Microsoft}} {
+        Created tools to support design and development workows in video games. Wrote rendering shaders and created 
+        a background loader for the Unreal Game Engine. Contributed to \emph{Gears of War 3: Ultimate Edition} and 
+        \emph{Gears of War 4}.
+    }
+
+
+\end{adjustwidth}
 
 \end{document}
