@@ -93,7 +93,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In 
     }
 
     \entryGeneral{2014/05\textemdash 2014/08}{Software Development Engineer Co-op}{The Coalition Studio, Microsoft}{
-        Created tools to support design and development workflows in video games. Wrote rendering shaders and created 
+        Created tools to support design and development workows in video games. Wrote rendering shaders and created 
         a background loader for the Unreal Game Engine. Contributed to \emph{Gears of War 3: Ultimate Edition} and 
         \emph{Gears of War 4} Xbox One video games.
     }
@@ -105,7 +105,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In 
 
     \entryGeneral{2012/05\textemdash 2012/08}{Multimedia Software Developer}{University of Waterloo} {
         Developed video conferencing software with an editable whiteboard using a Flash front-end and a Java EE 
-        back-end.
+        backend.
     }
 \end{adjustwidth}
 
