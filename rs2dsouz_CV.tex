@@ -7,15 +7,16 @@
 \makeoddfoot{plain}{}{}{}
 
 \setlength{\parindent}{0em}
-\setlength{\parskip}{0.5em}
-\setlength{\partopsep}{0em}
+\setlength{\parskip}{0em}
+\setlength{\partopsep}{0.25em}
 
 \setheadfoot{0em}{1em}
 \setlrmarginsandblock{2.5cm}{2.5cm}{*}
 \setulmarginsandblock{2.5cm}{2.5cm}{*}
 \checkandfixthelayout
 
-\setaftersecskip{0.5em}
+\setaftersecskip{1em}
+\setbeforesecskip{1em}
 
 \begin{document}
 
@@ -30,12 +31,14 @@
     \begin{adjustwidth}{1em}{0em}
         #4
     \end{adjustwidth}
+    \hfill
 }
 \newcommand{\entrySimple}[3]{
     \textbf{#2} \sourceatright{#1}
     \begin{adjustwidth}{1em}{0em}
         #3
     \end{adjustwidth}
+    \hfill
 }
 
 % ---------------------------------------------------------------------------------------------------------------------
@@ -90,7 +93,6 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Presented, In 
         Developed video conferencing software with an editable whiteboard using a Flash front-end and a Java EE 
         backend.
     }
-    
 \end{adjustwidth}
 
 \section*{Honours and Awards}
