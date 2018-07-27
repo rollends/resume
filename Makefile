@@ -8,5 +8,5 @@ $(BUILD_DIR):
 	mkdir $@
 
 %.pdf: $(BUILD_DIR) %.tex
-	pdflatex -output-directory=$(BUILD_DIR) $*.tex
+	lualatex -output-directory=$(BUILD_DIR) $*.tex
 	cp $(BUILD_DIR)/$@ $@
