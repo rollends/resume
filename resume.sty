@@ -1,0 +1,49 @@
+\RequirePackage{fontspec}
+\RequirePackage{url}
+
+\setmonofont[Ligatures=TeX]{UbuntuMono}
+
+% BEGIN: Title Styling
+%
+%\setlength{\droptitle}{-2em}
+\aliaspagestyle{title}{plain}
+\pretitle{\LARGE\textsc}
+\posttitle{}
+\preauthor{\small}
+\postauthor{}
+
+\date{}
+\predate{}
+\postdate{}
+
+\renewcommand{\maketitlehookb}{\\}
+\renewcommand{\maketitlehookc}{\\}
+\renewcommand{\maketitlehookd}{\rule{\linewidth}{0.4pt}}
+
+\newcommand{\name}[1]{\title{#1}}
+\newcommand{\subtitle}[1]{\author{#1}}
+%
+% END : Title Styling
+
+
+% BEGIN : General Styling
+%
+\setsecheadstyle{\large\scshape\centering}
+
+\pagestyle{plain}
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+\setlength{\partopsep}{0.25em}
+
+\setheadfoot{0em}{1em}
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{2cm}{2cm}{*}
+\checkandfixthelayout
+
+\setaftersecskip{1em}
+\setbeforesecskip{1em}
+%
+% END : GENERAL STYLING

@@ -1,36 +1,10 @@
 \documentclass[oneside, 10pt]{memoir}
+\usepackage{resume}
 
-\usepackage{fontspec}
-\usepackage{url}
-\setmainfont[   Ligatures=TeX,
-                UprightFont = Lora-Regular,
-                BoldFont = Lora-Bold,
-                ItalicFont = Lora-Italic,
-                BoldItalicFont = Lora-BoldItalic]{Lora}
-\setmonofont[Ligatures=TeX]{UbuntuMono}
-% ---------------------------------------------------------------------------------------------------------------------
-% General Styling
-%
-
-\pagestyle{plain}
-\makeevenfoot{plain}{}{}{}
-\makeoddfoot{plain}{}{}{}
-
-\setlength{\parindent}{0em}
-\setlength{\parskip}{0em}
-\setlength{\partopsep}{0.25em}
-
-\setheadfoot{0em}{1em}
-\setlrmarginsandblock{3cm}{3cm}{*}
-\setulmarginsandblock{3cm}{3cm}{*}
-\checkandfixthelayout
-
-\setaftersecskip{1em}
-\setbeforesecskip{1em}
-
-% ---------------------------------------------------------------------------------------------------------------------
-% Document
-%
+\name{Rollen S. D'Souza}
+\subtitle{%
+  \texttt{rollen.dsouza@uwaterloo.ca}~\textbullet~\texttt{github.com/rollends}~\textbullet~\texttt{rollends.ca}%
+}
 
 \begin{document}
 
@@ -62,13 +36,9 @@
     \hfill
 }
 
-% ---------------------------------------------------------------------------------------------------------------------
-% Begin Resume
-%
+% Title
+\maketitle
 
-\LARGE{\textsc{Rollen S. D'Souza}}\\
-\small{\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\url{github.com/rollends}~\textbullet~\url{rollends.ca} }\\
-\rule{\linewidth}{0.4pt}
 
 \section*{Teaching Experience}
 \begin{adjustwidth}{1em}{0em}%
