@@ -10,3 +10,5 @@ $(BUILD_DIR):
 %.pdf: $(BUILD_DIR) %.tex
 	lualatex -output-directory=$(BUILD_DIR) $*.tex
 	cp $(BUILD_DIR)/$@ $@
+
+.PHONY: all

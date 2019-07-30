@@ -30,7 +30,7 @@
 
 % ---------------------------------------------------------------------------------------------------------------------
 % Document
-% 
+%
 
 \begin{document}
 
@@ -40,6 +40,7 @@
 % #3 : Subtitle
 % #4 : Body
 \newcommand{\entryGeneral}[4]{
+    \filbreak
     \textbf{#2} \sourceatright{#1}
     \emph{#3}
     \begin{adjustwidth}{1em}{0em}
@@ -53,6 +54,7 @@
 % #2 : Flush Left (Heading)
 % #3 : Body
 \newcommand{\entrySimple}[3]{
+    \filbreak
     \textbf{#2} \sourceatright{#1}
     \begin{adjustwidth}{1em}{0em}
         #3
@@ -68,28 +70,51 @@
 \small{\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\url{github.com/rollends}~\textbullet~\url{rollends.ca} }\\
 \rule{\linewidth}{0.4pt}
 
+\section*{Teaching Experience}
+\begin{adjustwidth}{1em}{0em}%
+    \entryGeneral{2019/01\textemdash 2019/04}{Lab Instructor}{SE 350 (Operating Systems)}{
+        Led a team of teaching assistants in grading the complex, but interesting, operating systems lab for Software Engineering students. Prepared and delivered required lab material in tutorials. Provided assistance to students and answered questions on Piazza as needed.
+    }
+
+    \entryGeneral{2018/09\textemdash 2018/12}{Graduate Teaching Assistant}{SE 380 (Control Theory)}{
+        Prepared and delivered tutorial content on frequency-domain, linear control theory. Facilitated and graded weekly assignments.
+    }
+
+    \entryGeneral{2018/05\textemdash 2018/08}{Graduate Teaching Assistant}{MATH 213 (Signals and Systems)}{
+        Prepared and delivered tutorial content on fundamental signal and systems theory. Customized tutorials based on student needs as well as course instructor requirements. Wrote and uploaded tutorial notes to improve student outcomes by providing another study supplement.
+    }
+
+    \entryGeneral{2018/01\textemdash 2017/04}{Graduate Teaching Assistant}{SE 465 (Software Testing and QA)}{
+        Provided standard teaching assistant support: primarily grading and proctoring.
+    }
+
+    \entryGeneral{2017/09\textemdash 2017/12}{Graduate Teaching Assistant}{SE 101 (Intro to Software)}{
+        Designed, facilitated and graded a free-form, first-year engineering project for students. Students submitted proposals that were vetted, by my personal software expertise, for feasibility. Students were graded on a scale incorporating level of challenge, quality of execution and results.
+    }
+
+    \entryGeneral{2016/09\textemdash 2017/04}{Undergraduate Teaching Assistant}{SE 101/465}{
+        Assisted students in the first year SE101 course. Also was a teaching assistant for the SE465 Quality Assurance course. Duties included managing a weekly 2-hour lab section, marking weekly quiz submissions as well as a final course project. Engaged with students through Piazza and office hours.
+    }
+\end{adjustwidth}
+
 \section*{Publications}
 \begin{adjustwidth}{1em}{0em}%
-R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018. [Accepted] \hfill \\
+R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018. [Published] \hfill \\
 \hfill \\
-V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
+V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman
 Filter}, International Symposium on Experimental Robotics, 2016. [Published]
 \end{adjustwidth}
 
-\section*{Academic Work Experience}
+\section*{Research Experience}
 \begin{adjustwidth}{1em}{0em}%
-    \entrySimple{2017/09\textemdash 2018/08}{Teaching Assistant}{
-        A teaching assistant for Software-related courses SE101 and ECE459 and a tutorial assistant for the Signals and Systems course MATH213.
-    }
-
-    \entrySimple{2016/09\textemdash 2017/04}{Undergraduate Teaching Assistant}{
-        Assisted students in the first year SE101 course. Also was a teaching assistant for the SE465 Quality Assurance course. Duties included managing a weekly 2-hour lab section, marking weekly quiz submissions as well as a final course project. Engaged with students through Piazza and office hours.
+    \entrySimple{2018/09\textemdash \emph{Present}}{Doctoral Student}{
+        Research in the use of exterior differential calculus for constructive feedback linearizing controllers. Supervised by Prof. Christopher Nielsen.
     }
 
     \entrySimple{2016/05\textemdash 2016/08}{Undergraduate Research Assistant}{
         Supervised by Prof. Dana Kuli\'{c}.
     }
-    
+
     \entrySimple{2015/01\textemdash 2015/04}{Undergraduate Research Assistant}{
         Implemented real-time inverse kinematics algorithm for human motion capture data. Supervised by Prof. Dana Kuli\'{c}.
     }
@@ -97,25 +122,21 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
 
 \section*{Industry Work Experience}
 \begin{adjustwidth}{1em}{0em}%
-    \entryGeneral{2015/09\textemdash 2015/12}{Medical Software Developer Co-op}{Sunnybrook Health Sciences Centre}{
-        C++ Linux and Windows Application development contributing to the Vurtigo image-guidance visualization 
-        software for cardiac interventions.
+    \entryGeneral{2015/09\textemdash 2015/12}{Medical Software Developer Co-op}{Sunnybrook Health Sciences Centre}{%
+        C++ Linux and Windows Application development contributing to the Vurtigo image-guidance visualization software for cardiac interventions.
     }
 
-    \entryGeneral{2014/05\textemdash 2014/08}{Software Development Engineer Co-op}{The Coalition Studio, Microsoft}{
-        Created tools to support design and development workflows in video games. Wrote rendering shaders and created 
-        a background loader for the Unreal Game Engine. Contributed to \emph{Gears of War 3: Ultimate Edition} and 
-        \emph{Gears of War 4} Xbox One video games.
+    \entryGeneral{2014/05\textemdash 2014/08}{Software Development Engineer Co-op}{The Coalition Studio, Microsoft}{%
+        Created tools to support design and development workflows in video games. Wrote rendering shaders and created a background loader for the Unreal Game Engine. Contributed to \emph{Gears of War 3: Ultimate Edition} and \emph{Gears of War 4} Xbox One video games.
     }
-    
+
     \entryGeneral{2013/09\textemdash 2013/12}{Software Development Engineer Co-op}
-    {The Coalition Studio (formerly known as Black Tusk), Microsoft}{
+    {The Coalition Studio (formerly known as Black Tusk), Microsoft}{%
         Developed tools to report on runtime video game performance.
     }
 
-    \entryGeneral{2012/05\textemdash 2012/08}{Multimedia Software Developer}{University of Waterloo} {
-        Developed video conferencing software with an editable whiteboard using a Flash front-end and a Java EE 
-        back-end.
+    \entryGeneral{2012/05\textemdash 2012/08}{Multimedia Software Developer}{University of Waterloo} {%
+        Developed video conferencing software with an editable whiteboard using a Flash front-end and a Java EE back-end.
     }
 \end{adjustwidth}
 
@@ -133,7 +154,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
 
 \section*{Other Activities}
 \begin{adjustwidth}{1em}{0em}%
-    \entryGeneral{2018/09\textemdash Present}{Software Engineering Mentor}
+    \entryGeneral{2018/09\textemdash 2019/04}{Software Engineering Mentor}
     {University of Waterloo, Program of Software Engineering}{
         Part-time mentor for first year Software Engineering students in all courses that are deemed at need for a student.
     }
@@ -151,7 +172,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
     }
 
     \entryGeneral{2015/01\textemdash 2015/12}{Volunteer First Responder}{Campus Response Team, FEDS} {
-        Provided first aid services at student events and the student activity complex. 
+        Provided first aid services at student events and the student activity complex.
         Certified Standard First Aid/CPR-HCP.
     }
 \end{adjustwidth}
@@ -164,8 +185,7 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
     }
 
     \entryGeneral{2016/01\textemdash 2016/04}{Project: Real Time Operating System}{CS452, University of Waterloo}{
-        Implemented (hard) real time operating system in C, from the ground up, for the purpose of autonomously
-        managing trains on a physical track.
+        Implemented (hard) real time operating system in C, from the ground up, for the purpose of autonomously managing trains on a physical track.
     }
 \end{adjustwidth}
 
