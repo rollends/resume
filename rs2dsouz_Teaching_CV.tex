@@ -1,0 +1,231 @@
+\documentclass[oneside, 10pt]{memoir}
+\usepackage{fontspec}
+\usepackage{url}
+\usepackage{hyperref}
+
+%\setmainfont[Ligatures=TeX]{Lora}
+%\setmonofont[Ligatures=TeX]{UbuntuMono}
+% ---------------------------------------------------------------------------------------------------------------------
+% General Styling
+%
+
+\pagestyle{plain}
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+\setlength{\partopsep}{0.25em}
+
+\setheadfoot{1.5em}{1em}
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+
+\setaftersecskip{1em}
+\setbeforesecskip{1em}
+
+% ---------------------------------------------------------------------------------------------------------------------
+% Document
+% 
+
+\begin{document}
+
+% General Entry Command
+% #1 : Flush Right (Heading)
+% #2 : Flush Left (Heading)
+% #3 : Subtitle
+% #4 : Body
+\newcommand{\entryGeneral}[4]{
+    \textbf{#2} \sourceatright{#1}
+    \emph{#3}
+    \begin{adjustwidth}{1em}{0em}
+        #4
+    \end{adjustwidth}
+    \hfill
+}
+
+% Simple Entry Command (no subtitle)
+% #1 : Flush Right (Heading)
+% #2 : Flush Left (Heading)
+% #3 : Body
+\newcommand{\entrySimple}[3]{
+    \textbf{#2} \sourceatright{#1}
+    \begin{adjustwidth}{1em}{0em}
+        #3
+    \end{adjustwidth}
+    \hfill
+}
+
+% ---------------------------------------------------------------------------------------------------------------------
+% Begin Resume
+%
+
+\LARGE{\textsc{Rollen S. D'Souza}}\\
+\small{\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\url{https://github.com/rollends}~\textbullet~\url{https://rollends.ca} }\\
+\rule{\linewidth}{0.4pt}
+
+\section*{Education}
+\begin{adjustwidth}{1em}{0em}%
+    \entryGeneral{Expected 2022/05}{Ph.D \quad (Candidate)\quad(CGPA: \(89.00\))}{University of Waterloo}{
+        Thesis studying the application of the exterior differential calculus to nonlinear control design.
+        Supervised by Prof. Christopher Nielsen.
+    }
+
+    \entryGeneral{2017/07}{BSE\quad(CGPA: \(77.35\))}{University of Waterloo}{
+        Honours Software Engineering, Joint Honours Applied Mathematics.
+    }
+\end{adjustwidth}
+
+\section*{Teaching Summary}
+\begin{adjustwidth}{1em}{0em}%
+    Experienced educator having experience ranging from grading assignments and delivering tutorials to designing assessments and lab content.
+    Knowledge spans topics in software engineering to control theory.
+    %
+    \subsection*{Lab Instructor}
+    \begin{itemize}
+        \item{SE 380 : Introduction to Feedback Control (2 Terms)}
+        \item{SE 350 : Operating Systems (1 Term)}
+    \end{itemize}
+
+    \subsection*{Teaching Assistant}
+    \begin{itemize}
+        \item{MATH 213 : Signals and Systems (2 Terms)}
+        \item{SE/ECE 380 : Introduction to Feedback Control (3 Terms)}
+        \item{ECE 351 : Compilers (1 Term)}
+        \item{ECE 459 : Programming for Performance (1 Term)}
+        \item{SE 465 : Software Testing and Quality Assurance (1 Term)}
+        \item{SE 101 : Introduction to Software Engineering (2 Terms)}
+    \end{itemize}
+\end{adjustwidth}
+
+\section*{Detailed Teaching Experience}
+\begin{adjustwidth}{1em}{0em}%
+    \entrySimple{2021/01\textemdash Present}{Teaching Assistant}{
+        A teaching assistant for Software and Electrical \& Computer Engineering courses:
+        \begin{itemize}
+            \item{MATH 213 : Signals and Systems}
+        \end{itemize}
+        Duties included drafting and delivering tutorials online through the \texttt{Microsoft Teams} environment as well as drafting useful supplementary course material for additional practice offline.
+    }
+
+    \entrySimple{2020/05\textemdash 2020/12}{Lab Instructor}{
+        Developed and administered new, remote learning based, lab content for a Control Theory course using \texttt{MATLAB}.
+        Recorded and delivered online lab tutorials through \texttt{Youtube} and engaged directly with students through the use of \texttt{Discord}.
+        Successfully delivered lab content for two successive terms.
+        Lab content continues to be used by other lab instructors while online, remote learning persists.
+    }
+
+    \entrySimple{2019/05\textemdash 2020/04}{Teaching Assistant}{
+        A teaching assistant for Software and Electrical \& Computer Engineering courses:
+        \begin{itemize}
+            \item{ECE 351 : Compilers}
+            \item{SE/ECE 380 : Introduction to Feedback Control}
+        \end{itemize}
+        Duties included drafting and delivering tutorials and grading assessments.
+        Helped improve and maintain a \texttt{MATLAB} project for SE/ECE 380.
+    }
+
+    \entrySimple{2019/01\textemdash 2019/04}{Lab Instructor}{
+        Coordinated the Operating Systems (SE 350) course Lab component.
+        Students, in groups of four, had to build a basic real-time operating system starting with skeleton code.
+        Led a team of two teaching assistants in helping and grading students.
+        Provided direct hands-on help with understanding systems and debugging complex programming and hardware-related bugs.
+    }
+
+    \entrySimple{2017/09\textemdash 2018/12}{Teaching Assistant}{
+        A teaching assistant for Software-related courses:
+        \begin{itemize}
+            \item{SE 101 : Introduction to Software Engineering}
+            \item{ECE 459 : Programming for Performance}
+            \item{MATH 213 : Signals and Systems for Software Engineers}
+            \item{SE 380 : Introduction to Feedback Control}
+        \end{itemize}
+        Duties included drafting and delivering tutorials, grading assessments and guiding students through independent group projects.
+        Provided 1-1 guidance for students on independent group projects for SE 101, helping develop and grow their ability to design and develop software.
+    }
+
+    \entrySimple{2016/09\textemdash 2017/04}{Undergraduate Teaching Assistant}{
+        A teaching assistant for Software-related courses:
+        \begin{itemize}
+            \item{SE 101 : Introduction to Software Engineering}
+            \item{SE 465 : Software Testing and Quality Assurance}
+        \end{itemize}
+        Duties included managing a weekly 2-hour lab section, marking weekly quiz submissions as well as a final course project. 
+        Engaged with students through Piazza and office hours.
+    }
+\end{adjustwidth}
+
+\section*{Publications}
+
+\subsection*{Journal Publications}
+\begin{adjustwidth}{1em}{0em}%
+R.S. D'Souza and C. Nielsen. \emph{An Exterior Differential Characterization of Single-Input Local Transverse Feedback Linearization}, Automatica. [To Appear]\hfill\\
+\hfill \\
+R.S. D'Souza, R. Louwers, C. Nielsen. \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, IEEE Transactions on Control Systems Technology, DOI: \href{https://dx.doi.org/10.1109/TCST.2021.3049715}{10.1109/TCST.2021.3049715}. [To Appear]\hfill
+\end{adjustwidth}
+
+\subsection*{Conference Publications}
+\begin{adjustwidth}{1em}{0em}%
+R. S. D'Souza and C. Nielsen, \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, American Control Conference, 2020. \hfill \\
+\hfill \\
+R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018. \hfill \\
+\hfill \\
+V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
+Filter}, International Symposium on Experimental Robotics, 2016.\hfill
+\end{adjustwidth}
+
+\section*{Honours and Awards}
+\begin{adjustwidth}{1em}{0em}%
+    \begin{tabular}{ll}
+        2020    &   Queen Elizabeth II Graduate Scholarship in Science \& Technology\\
+        2018    &   University of Waterloo, Sir Sanford Fleming Foundation, Teaching Assistantship Excellence Award\\
+        2018    &   University of Waterloo, Dept. of Electrical \& Computer Eng., Teaching Assistant Award\\
+        2016    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
+        2016    &   General Motors (GM) Innovation Award \\
+        2015    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
+        2014    &   International Genetically Engineered Machine (iGEM) Competition \textemdash~Best Model \\
+        2011    &   University of Waterloo President's Scholarship \\
+    \end{tabular}
+\end{adjustwidth}
+
+% \section*{Other Activities}
+% \begin{adjustwidth}{1em}{0em}%
+%     \entryGeneral{2018/09\textemdash 2019/12}{Software Engineering Mentor}
+%     {University of Waterloo, Program of Software Engineering}{
+%         Part-time mentor for first year Software Engineering students in all courses that are deemed at need for a student.
+%     }
+
+%     \entryGeneral{2015/09\textemdash 2016/04}{Software Engineering Curriculuum Committee Student Representative}
+%     {University of Waterloo, Program of Software Engineering}{
+%         Represented student body on matters regarding curriculuum changes for future classes of Software Engineering.
+%     }
+
+%     \entryGeneral{2015/01\textemdash 2015/12}{Math Modeller}
+%     {International Genetically Engineered Machine (iGEM) Competition - Team Waterloo} {
+%         Developed and analyzed mathematical models of the CRISPR-mRNA interference mechanism alongside
+%         interdisciplinary team of mathematics, physics, engineering and biology undergraduate students.
+%         Main contribution consisted of performing global sensitivity analysis.
+%     }
+
+%     \entryGeneral{2015/01\textemdash 2015/12}{Volunteer First Responder}{Campus Response Team, FEDS} {
+%         Provided first aid services at student events and the student activity complex. 
+%         Certified Standard First Aid/CPR-HCP.
+%     }
+% \end{adjustwidth}
+
+
+% \section*{Projects}
+% \begin{adjustwidth}{1em}{0em}%
+%     \entryGeneral{2017/01\textemdash 2017/04}{Project: Comparison of Transverse Feedback Linearizing Controllers}{SE499, University of Waterloo}{
+%         Undergraduate research project investigating two different implementations of path following controllers. Supervised by Prof. Christopher Nielsen.
+%     }
+
+%     \entryGeneral{2016/01\textemdash 2016/04}{Project: Real Time Operating System}{CS452, University of Waterloo}{
+%         Implemented (hard) real time operating system in C, from the ground up, for the purpose of autonomously
+%         managing trains on a physical track.
+%     }
+% \end{adjustwidth}
+
+
+\end{document}
