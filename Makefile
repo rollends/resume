@@ -7,14 +7,14 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 $(BUILD_DIR):
-	-rm -rf $(BUILD_DIR)
-	mkdir $@
+	mkdir -p $@
 
-%.pdf: $(BUILD_DIR) %.tex
-	xelatex -output-directory=$(BUILD_DIR) $*.tex
-	xelatex -output-directory=$(BUILD_DIR) $*.tex
-	xelatex -output-directory=$(BUILD_DIR) $*.tex
-	cp $(BUILD_DIR)/$@ $@
+$(BUILD_DIR)/%:
+	mkdir -p $@
+
+%.pdf: $(BUILD_DIR)/% %.tex
+	xelatex -output-directory=$(BUILD_DIR)/$* $*.tex
+	cp $(BUILD_DIR)/$*/$@ $@
 
 spellcheck: spellcheck-rs2dsouz_Teaching_CV
 

@@ -1,10 +1,16 @@
 \documentclass[oneside, 10pt]{memoir}
-\usepackage{fontspec}
-\usepackage{url}
+\usepackage[
+    usefilenames,% Important for XeLaTeX
+    RMstyle={Text,Semibold},
+    SSstyle={Text,Semibold},
+    TTstyle={Text,Semibold},
+    DefaultFeatures={Ligatures=TeX}
+]{plex-otf}
 \usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{url}
 
-%\setmainfont[Ligatures=TeX]{Lora}
-%\setmonofont[Ligatures=TeX]{UbuntuMono}
+
 % ---------------------------------------------------------------------------------------------------------------------
 % General Styling
 %
@@ -14,23 +20,27 @@
 \makeoddfoot{plain}{}{}{}
 
 \setlength{\parindent}{0em}
-\setlength{\parskip}{0em}
-\setlength{\partopsep}{0.25em}
+% \setlength{\parskip}{0em}
+% \setlength{\partopsep}{0.25em}
 
-\setheadfoot{1.5em}{1em}
-\setlrmarginsandblock{3cm}{3cm}{*}
-\setulmarginsandblock{3cm}{3cm}{*}
+% \setheadfoot{1.5em}{1em}
+\setlrmarginsandblock{4cm}{4cm}{*}
+\setulmarginsandblock{1.5cm}{1.5cm}{*}
 \checkandfixthelayout
 
+\setbeforesecskip{2em}
 \setaftersecskip{1em}
-\setbeforesecskip{1em}
+\setsecheadstyle{\Large\centering\bfseries}
+\setsubsecheadstyle{\bfseries\slshape}
+\def\arraystretch{1.45}%
 
 % ---------------------------------------------------------------------------------------------------------------------
 % Document
 % 
 
+% EDUCATION ENTRY COMMAND
+%
 \begin{document}
-
 % General Entry Command
 % #1 : Flush Right (Heading)
 % #2 : Flush Left (Heading)
@@ -60,45 +70,68 @@
 % ---------------------------------------------------------------------------------------------------------------------
 % Begin Resume
 %
-
-\LARGE{\textsc{Rollen S. D'Souza}}\\
-\small{\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\url{https://github.com/rollends}~\textbullet~\url{https://rollends.ca} }\\
+\LARGE{{Rollen S. D'Souza}}\\
+\small{\texttt{rollen.dsouza@uwaterloo.ca}~\textbullet~\href{https://github.com/rollends}{\texttt{github.com/rollends}}~\textbullet~\href{https://rollends.ca}{\texttt{rollends.ca}} }\\
 \rule{\linewidth}{0.4pt}
 
 \section*{Education}
-\begin{adjustwidth}{1em}{0em}%
-    \entryGeneral{Expected 2022/05}{Ph.D \quad (Candidate)\quad(CGPA: \(89.00\))}{University of Waterloo}{
-        Thesis studying the application of the exterior differential calculus to nonlinear control design.
-        Supervised by Prof. Christopher Nielsen.
-    }
 
-    \entryGeneral{2017/07}{BSE\quad(CGPA: \(77.35\))}{University of Waterloo}{
-        Honours Software Engineering, Joint Honours Applied Mathematics.
-    }
-\end{adjustwidth}
+\begin{tabular}{ll}
+    {2022}
+        & \emph{Candidate for} Doctor of Philosophy\\
+        & \emph{Exterior Differential Characterization for Transverse Feedback Linearization}\\
+        & Supervisor: Prof. Christopher Nielsen\\
+        & University of Waterloo.\\
+        & \\
+    {2017}
+        & Bachelor of Software Engineering\\
+        & Honours Software Engineering\\
+        & Joint Honours Applied Mathematics\\
+        & University of Waterloo.
+\end{tabular}
 
-\section*{Teaching Summary}
-\begin{adjustwidth}{1em}{0em}%
-    Experienced educator having experience ranging from grading assignments and delivering tutorials to designing assessments and lab content.
-    Knowledge spans topics in software engineering to control theory.
-    %
-    \subsection*{Lab Instructor}
-    \begin{itemize}
-        \item{SE 380 : Introduction to Feedback Control (2 Terms)}
-        \item{SE 350 : Operating Systems (1 Term)}
-    \end{itemize}
+\section*{Teaching Experience}
+Experienced educator having experience ranging from grading assignments and delivering tutorials to designing assessments and lab content.
+Knowledge spans topics in software engineering to control theory.
 
-    \subsection*{Teaching Assistant}
-    \begin{itemize}
-        \item{MATH 213 : Signals and Systems (2 Terms)}
-        \item{SE/ECE 380 : Introduction to Feedback Control (3 Terms)}
-        \item{ECE 351 : Compilers (1 Term)}
-        \item{ECE 459 : Programming for Performance (1 Term)}
-        \item{SE 465 : Software Testing and Quality Assurance (1 Term)}
-        \item{SE 101 : Introduction to Software Engineering (2 Terms)}
-    \end{itemize}
-\end{adjustwidth}
+\begin{longtable}{l|l|l}
+    \textbf{Term} & \textbf{Course} & \textbf{Class Size}\\ \hline\hline
+    & & \\\hline
+    \multicolumn{3}{c}{\textbf{Lab Instructor}}\\\hline
+    & & \\
+    {2020 FALL  } & {SE 380 (Introduction to Control Theory)} & 2\\
+    {2020 SPRING} & {SE 380 (Introduction to Control Theory)} & 2\\
+    {2018 WINTER} & {SE 350 (Operating Systems)} & 2\\
+    & & \\\hline
+    \multicolumn{3}{c}{\textbf{Teaching Assistant}}\\\hline
+    & & \\
+    {2021 WINTER} & {MATH 213 (Signals and Systems)} & 115\\
+    {2020 WINTER} & {ECE 380 (Introduction to Control Theory)} & 142\\
+    {2019 FALL  } & {SE 380 (Introduction to Control Theory)} & 91\\
+    {2019 SPRING} & {ECE 351 (Compilers)} & 162\\
+    {2019 WINTER} & {ECE 459 (Programming for Performance)} & \\
+    {2018 FALL  } & {SE 380 (Introduction to Control Theory)} & 109\\
+    {2018 SPRING} & {MATH 213 (Signals and Systems)} & 118\\
+    {2017 FALL  } & {SE 101 (Introduction to Software Engineering)} & 139\\
+    {2017 WINTER} & {SE 465 (Software Testing and Quality Assurance)} & \\
+    {2016 FALL  } & {SE 101 (Introduction to Software Engineering)} & 131
+\end{longtable}
 
+\section*{Academic Service}
+
+\section*{Academic Publications}
+
+\subsection*{Journal Publications}
+R. S. D'Souza and C. Nielsen. \emph{An Exterior Differential Characterization of Single-Input Local Transverse Feedback Linearization}, Automatica. [To Appear]\hspace*{\fill}\\[1em]
+R. S. D'Souza, R. Louwers, C. Nielsen. \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, IEEE Transactions on Control Systems Technology,\hspace*{\fill}\linebreak DOI: \href{https://dx.doi.org/10.1109/TCST.2021.3049715}{10.1109/TCST.2021.3049715}. [To Appear]\hspace*{\fill}
+
+\subsection*{Conference Publications}
+R. S. D'Souza and C. Nielsen, \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, American Control Conference, 2020.\hspace*{\fill}\\[1em]
+R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018.\hspace*{\fill}\\[1em]
+V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
+Filter}, International Symposium on Experimental Robotics, 2016.\hspace*{\fill}
+
+\begin{comment}
 \section*{Detailed Teaching Experience}
 \begin{adjustwidth}{1em}{0em}%
     \entrySimple{2021/01\textemdash Present}{Teaching Assistant}{
@@ -155,39 +188,30 @@
         Engaged with students through Piazza and office hours.
     }
 \end{adjustwidth}
-
-\section*{Publications}
-
-\subsection*{Journal Publications}
-\begin{adjustwidth}{1em}{0em}%
-R.S. D'Souza and C. Nielsen. \emph{An Exterior Differential Characterization of Single-Input Local Transverse Feedback Linearization}, Automatica. [To Appear]\hfill\\
-\hfill \\
-R.S. D'Souza, R. Louwers, C. Nielsen. \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, IEEE Transactions on Control Systems Technology, DOI: \href{https://dx.doi.org/10.1109/TCST.2021.3049715}{10.1109/TCST.2021.3049715}. [To Appear]\hfill
-\end{adjustwidth}
-
-\subsection*{Conference Publications}
-\begin{adjustwidth}{1em}{0em}%
-R. S. D'Souza and C. Nielsen, \emph{Piecewise-Linear Path Following for a Unicycle using Transverse Feedback Linearization}, American Control Conference, 2020. \hfill \\
-\hfill \\
-R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018. \hfill \\
-\hfill \\
-V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
-Filter}, International Symposium on Experimental Robotics, 2016.\hfill
-\end{adjustwidth}
+\end{comment}
 
 \section*{Honours and Awards}
-\begin{adjustwidth}{1em}{0em}%
-    \begin{tabular}{ll}
-        2020    &   Queen Elizabeth II Graduate Scholarship in Science \& Technology\\
-        2018    &   University of Waterloo, Sir Sanford Fleming Foundation, Teaching Assistantship Excellence Award\\
-        2018    &   University of Waterloo, Dept. of Electrical \& Computer Eng., Teaching Assistant Award\\
-        2016    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
-        2016    &   General Motors (GM) Innovation Award \\
-        2015    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
-        2014    &   International Genetically Engineered Machine (iGEM) Competition \textemdash~Best Model \\
-        2011    &   University of Waterloo President's Scholarship \\
-    \end{tabular}
-\end{adjustwidth}
+\begin{center}
+\begin{tabular}{lll}
+    \textbf{Year} & \textbf{Agency} & \textbf{Title}\\ \hline\hline
+    2020    &   Govt. of Ontario & QEII Grad. Scholar. Science \& Tech.\\
+    2018
+        & \begin{minipage}[t]{18em} University of Waterloo\\ Sir Sanford Fleming Foundation \end{minipage}
+        & TA Excellence Award\\
+    2018
+        & \begin{minipage}[t]{18em} University of Waterloo\\ Dept. of Electrical \& Computer Eng. \end{minipage}
+        & TA Award\\
+    2016    &   NSERC & Undergrad Student RA (USRA) \\
+    2016
+        & \begin{minipage}[t]{18em} University of Waterloo\\ Software Eng. Program \end{minipage}
+        & General Motors (GM) Innovation Award \\
+    2015    &   NSERC & Undergrad Student RA (USRA) \\
+    2014
+        & \begin{minipage}[t]{18em} International Genetically Engineered\\ Machine (iGEM) Competition \end{minipage}
+        & Best Model \\
+    2011    &   University of Waterloo & President's Scholarship \\
+\end{tabular}
+\end{center}
 
 % \section*{Other Activities}
 % \begin{adjustwidth}{1em}{0em}%
