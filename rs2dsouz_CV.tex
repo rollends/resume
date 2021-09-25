@@ -2,12 +2,27 @@
 
 \usepackage{fontspec}
 \usepackage{url}
-%\setmainfont[Ligatures=TeX]{Lora}
-%\setmonofont[Ligatures=TeX]{UbuntuMono}
-% ---------------------------------------------------------------------------------------------------------------------
+\usepackage[%
+  usefilenames,%
+  RMstyle         = {Text},%
+  SSstyle         = {Text},%
+  TTstyle         = {Text},%
+  DefaultFeatures = {Ligatures = Common}%
+]{plex-otf}
+
+%---------------------------------------------------------------------
+% PDF STUFF
+%
+\usepackage[
+  colorlinks,
+]{hyperref}
+
+%
+%---------------------------------------------------------------------
+
+% --------------------------------------------------------------------
 % General Styling
 %
-
 \pagestyle{plain}
 \makeevenfoot{plain}{}{}{}
 \makeoddfoot{plain}{}{}{}
@@ -23,8 +38,10 @@
 
 \setaftersecskip{1em}
 \setbeforesecskip{1em}
+%
+%---------------------------------------------------------------------
 
-% ---------------------------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------
 % Document
 % 
 
@@ -56,63 +73,90 @@
     \hfill
 }
 
-% ---------------------------------------------------------------------------------------------------------------------
+% --------------------------------------------------------------------
 % Begin Resume
 %
 
-\LARGE{\textsc{Rollen S. D'Souza}}\\
-\small{\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\url{github.com/rollends}~\textbullet~\url{rollends.ca} }\\
+{\LARGE\textbf{Rollen S. D'Souza}}\\
+{\small\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\href{https://github.com/rollends}{\texttt{github.com/rollends}}~\textbullet~\href{https://rollends.ca}{\texttt{rollends.ca}} }\\
 \rule{\linewidth}{0.4pt}
 
-\section*{Publications}
+\vskip 1em
+{\Large\textbf{publications}}\\
+\emph{Rollen is a nonlinear control theorist with experience developing theory for algorithmic control design as well as analyzing and implementing real control systems.}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
-R. S. D'Souza and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, IEEE Conference on Decision and Control, 2018. [Published] \hfill \\
-\hfill \\
-V. Joukov, R. D'Souza and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman 
-Filter}, International Symposium on Experimental Robotics, 2016. [Published]
+  \begin{center}{\large \textbf{in review}}\end{center}
+  \vskip 0.5em
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{An Algorithm for Local Transverse Feedback Linearization}, SIAM J. Control Optim., 2021. [In Review, \href{https://arxiv.org/abs/2109.00641}{arXiv:2109.00641} \texttt{[math.OC]}]
 \end{adjustwidth}
 
-\section*{Academic Work Experience}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
-    \entrySimple{2019/05\textemdash 2019/12}{Teaching Assistant}{
-        A teaching assistant for Software-related courses:
-        \begin{itemize}
-            \item{ECE351: Compilers}
-            \item{SE380: Introduction to Feedback Control}
-        \end{itemize}
-    }
-
-    \entrySimple{2019/01\textemdash 2019/04}{Lab Instructor}{
-        Coordinated Operating Systems (SE350) Lab component. Students had
-        to develop, from skeleton code, a basic real-time operating system
-        in groups of four. Led a team of two teaching assistants in helping
-        and grading students.
-    }
-
-    \entrySimple{2017/09\textemdash 2018/12}{Teaching Assistant}{
-        A teaching assistant for Software-related courses:
-        \begin{itemize}
-            \item{SE101: Introduction to Software Engineering}
-            \item{ECE459: Programming for Performance}
-            \item{MATH213: Signals and Systems for Software Engineers}
-            \item{SE380: Introduction to Feedback Control}
-        \end{itemize}
-    }
-
-    \entrySimple{2016/09\textemdash 2017/04}{Undergraduate Teaching Assistant}{
-        Assisted students in the first year SE101 course. Also was a teaching assistant for the SE465 Quality Assurance course. Duties included managing a weekly 2-hour lab section, marking weekly quiz submissions as well as a final course project. Engaged with students through Piazza and office hours.
-    }
-
-    \entrySimple{2016/05\textemdash 2016/08}{Undergraduate Research Assistant}{
-        Supervised by Prof. Dana Kuli\'{c}.
-    }
-    
-    \entrySimple{2015/01\textemdash 2015/04}{Undergraduate Research Assistant}{
-        Implemented real-time inverse kinematics algorithm for human motion capture data. Supervised by Prof. Dana Kuli\'{c}.
-    }
+  \begin{center}{\large \textbf{journal}}\end{center}
+  \vskip 0.5em
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Path Following Control Design for a Gliding Missile}, {IEEE} Trans. Aerosp. Electron. Syst., 2021. [Published, \href{https://doi.org/10.1109/TAES.2021.3111785}{Early Access}]\hfill\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{An Exterior Differential Characterization of Single-Input Local Transverse Feedback Linearization}, Automatica, vol. 127, 2021. pp. 109493. [\href{https://doi.org/10.1016/j.automatica.2021.109493}{Published}]\hfill\\[1em]
+  \textbf{R. S. D'Souza}, R. Louwers and C. Nielsen, \emph{Piecewise Linear Path Following for a Unicycle using Transverse Feedback Linearization}, {IEEE} Trans. Control Syst. Technol., 2021. [Published, \href{https://doi.org/10.1109/TCST.2021.3049715}{Early Access}]
 \end{adjustwidth}
 
-\section*{Industry Work Experience}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \begin{center}{\large \textbf{conference}}\end{center}
+  \vskip 0.5em
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Piecewise Linear Path Following for a Unicycle using Transverse Feedback Linearization}, 2020 American Control Conference (ACC), 2020, pp. 5250--5255. [\href{https://doi.org/10.23919/ACC45564.2020.9147473.}{Published}]\hfill\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, 2018 IEEE Conference on Decision and Control (CDC), 2018, pp. 2983--2943. [\href{https://doi.org/10.1109/CDC.2018.8619815}{Published}]\hfill\\[1em]
+  V. Joukov, \textbf{R. D'Souza} and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman Filter}, 2016 International Symposium on Experimental Robotics, 2016. pp. 789--798. [\href{https://doi.org/10.1007/978-3-319-50115-4_68}{Published}]
+\end{adjustwidth}
+
+\vskip 1em
+{\Large\textbf{teaching experience}}\\
+\emph{Rollen is an award-winning teaching assistant and lab instructor that is highly rated by his students, peers and colleagues alike.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+    Course Instructor 
+    \begin{itemize}
+      \item{Introduction to Control}
+    \end{itemize}
+    \vskip 1em
+
+    Lab Instructor
+    \begin{itemize}
+      \item{Operating Systems,}
+      \item{Introduction to Control (2 Terms)}
+    \end{itemize}
+    \vskip 1em
+
+    Work Term Report Grader (2 Years)
+    \vskip 1em
+
+    Software Engineering First Year Mentor (1.5 Years)
+    \vskip 1em
+
+    Teaching Assistant
+    \begin{itemize}
+      \item{Introduction to Software Engineering Project Course (2 Terms),}
+      \item{Signals and Systems (2 Terms),}
+      \item{Introduction to Control (2 Terms),}
+      \item{Program Performance and Optimization,}
+      \item{Introduction to Compilers,}
+      \item{Software Quality Assurance, Testing and Maintenance,}
+    \end{itemize}
+    \vskip 1em
+% 
+% \entrySimple{2016/05\textemdash 2016/08}{Undergraduate Research Assistant}{
+%     Supervised by Prof. Dana Kuli\'{c}.
+% }
+
+% \entrySimple{2015/01\textemdash 2015/04}{Undergraduate Research Assistant}{
+%     Implemented real-time inverse kinematics algorithm for human motion capture data. Supervised by Prof. Dana Kuli\'{c}.
+% }
+\end{adjustwidth}
+
+\vskip 1em
+{\Large\textbf{industry experience}}\\
+\emph{Rollen has work experience using a wide-range of technical skills in the software engineering field.}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
     \entryGeneral{2015/09\textemdash 2015/12}{Medical Software Developer Co-op}{Sunnybrook Health Sciences Centre}{
         C++ Linux and Windows Application development contributing to the Vurtigo image-guidance visualization 
@@ -136,19 +180,38 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
     }
 \end{adjustwidth}
 
-\section*{Honours and Awards}
+\vskip 1em
+{\Large\textbf{funding}}\\
+\emph{Rollen has acquired competitive funding.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+    \begin{tabular}{llr}
+        2021 & Ontario Graduate Scholarship & \$15,000\\
+        2020 & QEII Graduate Student Scholarship in Technology & \$15,000\\
+        2016    &   NSERC Undergraduate Student Research Assistantship (USRA) & \$4,000\\
+        2015    &   NSERC Undergraduate Student Research Assistantship (USRA) & \$4,000
+    \end{tabular}
+\end{adjustwidth}
+
+\vskip 1em
+{\Large\textbf{honours and awards}}\\
+\emph{Rollen is well-recognized for his passion in his work and teaching.}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
     \begin{tabular}{ll}
+        2021    &   Amit and Meena Chakma Award for Exceptional Teaching by a Student\\
+        2018    &   Award for Teaching Assistantship Excellence\\
         2018    &   ECE Teaching Assistant Award\\
-        2016    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
         2016    &   General Motors (GM) Innovation Award \\
-        2015    &   NSERC Undergraduate Student Research Assistantship (USRA) \\
         2014    &   International Genetically Engineered Machine (iGEM) Competition \textemdash~Best Model \\
         2011    &   University of Waterloo President's Scholarship \\
     \end{tabular}
 \end{adjustwidth}
 
-\section*{Other Activities}
+\vskip 1em
+{\Large\textbf{other activities}}\\
+\emph{Rollen is a unique individual with a variety of interests. Get to know a little about me here!}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
     \entryGeneral{2018/09\textemdash Present}{Software Engineering Mentor}
     {University of Waterloo, Program of Software Engineering}{
@@ -173,7 +236,6 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
     }
 \end{adjustwidth}
 
-
 \section*{Projects}
 \begin{adjustwidth}{1em}{0em}%
     \entryGeneral{2017/01\textemdash 2017/04}{Project: Comparison of Transverse Feedback Linearizing Controllers}{SE499, University of Waterloo}{
@@ -186,15 +248,21 @@ Filter}, International Symposium on Experimental Robotics, 2016. [Published]
     }
 \end{adjustwidth}
 
-\section*{Education}
+\vskip 1em
+{\Large\textbf{education}}\\
+\emph{Rollen is a former software engineer turned control theorist.}
+\vskip 0.75em
 \begin{adjustwidth}{1em}{0em}%
-    \entryGeneral{Expected 2022/08}{Ph.D\quad\emph{(Candidate)}\quad(CGPA: \(92.00\))}{University of Waterloo}{
-        Supervised by Prof. Christopher Nielsen.
-    }
+  \textbf{Doctor of Philosophy} in Electrical and Computer Engineering (Expected May 2022)\hfill\\
+  University of Waterloo\\
+  Thesis: An Algorithm for Local Transverse Feedback Linearization.\\
+  Supervisor: Prof. Christopher Nielsen.
+  \vskip 1em
 
-    \entryGeneral{2017/07}{\textbf{BSE}\quad(CGPA: \(77.35\))}{University of Waterloo}{
-        Honours Software Engineering, Joint Honours Applied Mathematics.
-    }
+  \textbf{Bachelor of Software Engineering} (June 2017)\hfill\\
+  Honours Software Engineering\\
+  Joint Honours Applied Mathematics\\
+  University of Waterloo.
 \end{adjustwidth}
 
 \end{document}
