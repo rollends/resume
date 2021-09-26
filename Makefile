@@ -16,7 +16,7 @@ $(BUILD_DIR)/%:
 	texfot xelatex -output-directory=$(BUILD_DIR)/$* $*.tex
 	cp $(BUILD_DIR)/$*/$@ $@
 
-spellcheck: spellcheck-rs2dsouz_Teaching_CV spellcheck-rs2dsouz_IndustryResearch
+spellcheck: spellcheck-rs2dsouz_CV spellcheck-rs2dsouz_Teaching_CV spellcheck-rs2dsouz_IndustryResearch
 
 spellcheck-%: %.tex
 	detex -lnw $< | hunspell -d en_CA -L > $@
