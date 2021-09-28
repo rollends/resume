@@ -17,7 +17,6 @@
 %---------------------------------------------------------------------
 % PDF STUFF
 %
-\usepackage{cmap}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[
   colorlinks,
@@ -43,9 +42,6 @@
 \setlrmarginsandblock{3cm}{3cm}{*}
 \setulmarginsandblock{3cm}{3cm}{*}
 \checkandfixthelayout
-
-\setaftersecskip{1em}
-\setbeforesecskip{1em}
 %
 %---------------------------------------------------------------------
 
@@ -55,41 +51,17 @@
 
 \begin{document}
 
-% General Entry Command
-% #1 : Flush Right (Heading)
-% #2 : Flush Left (Heading)
-% #3 : Subtitle
-% #4 : Body
-\newcommand{\entryGeneral}[4]{
-    \textbf{#2} \sourceatright{#1}
-    \emph{#3}
-    \begin{adjustwidth}{1em}{0em}
-        #4
-    \end{adjustwidth}
-    \hfill
-}
-
-% Simple Entry Command (no subtitle)
-% #1 : Flush Right (Heading)
-% #2 : Flush Left (Heading)
-% #3 : Body
-\newcommand{\entrySimple}[3]{
-    \textbf{#2} \sourceatright{#1}
-    \begin{adjustwidth}{1em}{0em}
-        #3
-    \end{adjustwidth}
-    \hfill
-}
-
 % --------------------------------------------------------------------
 % Begin Resume
 %
 
+\pdfbookmark[0]{Rollen S. D'Souza's Resume}{resume}
 {\LARGE\textbf{Rollen S. D'Souza}}\\
 {\small\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\href{https://github.com/rollends}{\texttt{github.com/rollends}}~\textbullet~\href{https://rollends.ca}{\texttt{rollends.ca}} }\\
 \rule{\linewidth}{0.4pt}
 
 \vskip 1em
+\pdfbookmark[1]{Publications}{pubs}
 \ul{\Large\textbf{publications}}
 \vskip 0.25em
 \emph{Rollen is a published nonlinear control theorist with demonstrably strong experience developing theory for algorithmic control design as well as analyzing and implementing real control systems.}
@@ -119,6 +91,7 @@
 \end{adjustwidth}
 
 \vskip 1em
+\pdfbookmark[1]{Teaching Experience}{teaching}
 \ul{\Large\textbf{teaching experience}}
 \vskip 0.25em
 \emph{Rollen is an award-winning teaching assistant and lab instructor that is highly rated by his students, peers and colleagues alike.}
@@ -190,6 +163,7 @@
 % }
 
 \vskip 1em
+\pdfbookmark[1]{Academic Service}{academic}
 \ul{\Large\textbf{academic service}}
 \vskip 0.25em
 \emph{Rollen is excited to participate in the academic community locally and globally.}
@@ -246,6 +220,7 @@
 
 \vskip 1em
 \pagebreak
+\pdfbookmark[1]{Funding}{funding}
 \ul{\Large\textbf{funding}}
 \vskip 0.25em
 \emph{Rollen has acquired competitive funding.}
@@ -260,6 +235,7 @@
 \end{adjustwidth}
 
 \vskip 1em
+\pdfbookmark[1]{Honours and Awards}{awards}
 \ul{\Large\textbf{honours and awards}}
 \vskip 0.25em
 \emph{Rollen is well-recognized for his passion in his work and teaching.}
@@ -276,6 +252,7 @@
 \end{adjustwidth}
 
 \vskip 1em
+\pdfbookmark[1]{Memberships}{members}
 \ul{\Large\textbf{memberships}}
 \vskip 0.25em
 \emph{Rollen is interested in acquiring memberships relevant to his field and contributing to his community.}
@@ -289,6 +266,7 @@
 \end{adjustwidth}
 
 \vskip 1em
+\pdfbookmark[1]{Other Activities}{other}
 \ul{\Large\textbf{other activities}}
 \vskip 0.25em
 \emph{Rollen is a unique individual with a variety of interests. Get to know a little about me here!}
@@ -325,6 +303,7 @@
     % }
 
 \vskip 1em
+\pdfbookmark[1]{Projects}{projects}
 \ul{\Large\textbf{projects}}
 \vskip 0.25em
 \emph{Rollen likes to write code. Here is an excerpt of interesting projects Rollen has worked on over the years. All projects listed here can either be found in his Github profile, or the source code can be requested.}
@@ -356,6 +335,7 @@
 \end{adjustwidth}
 
 \vskip 1em
+\pdfbookmark[1]{Education}{education}
 \ul{\Large\textbf{education}}
 \vskip 0.25em
 \emph{Rollen is a former software engineer turned control theorist.}

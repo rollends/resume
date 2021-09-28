@@ -7,14 +7,14 @@ all: $(RESUME) spellcheck
 clean:
 	rm -rf $(BUILD_DIR)
 
-$(BUILD_DIR):
+$(BUILD_DIR): Makefile
 	mkdir -p $@
 
-$(BUILD_DIR)/%:
+$(BUILD_DIR)/%: $(BUILD_DIR)
 	mkdir -p $@
 
 %.pdf: $(BUILD_DIR)/% %.tex
-	texfot xelatex -output-directory=$(BUILD_DIR)/$* $*.tex
+	texfot lualatex -output-directory=$(BUILD_DIR)/$* $*.tex
 	cp $(BUILD_DIR)/$*/$@ $@
 
 spellcheck: spellcheck-rs2dsouz_CV spellcheck-rs2dsouz_Teaching_CV
