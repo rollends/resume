@@ -7,13 +7,11 @@ all: $(RESUME) spellcheck
 clean:
 	rm -rf $(BUILD_DIR)
 
-$(BUILD_DIR): Makefile
-	mkdir -p $@
+$(BUILD_DIR)/%.built: Makefile
+	mkdir -p $(BUILD_DIR)/$*
+	touch $@
 
-$(BUILD_DIR)/%: $(BUILD_DIR)
-	mkdir -p $@
-
-%.pdf: $(BUILD_DIR)/% %.tex
+%.pdf: $(BUILD_DIR)/%.built %.tex
 	texfot lualatex -output-directory=$(BUILD_DIR)/$* $*.tex
 	cp $(BUILD_DIR)/$*/$@ $@
 
