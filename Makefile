@@ -5,7 +5,7 @@ BUILD_DIR = build
 all: $(RESUME) spellcheck
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(RESUME) spellcheck-*
 
 $(BUILD_DIR)/%.built: Makefile
 	mkdir -p $(BUILD_DIR)/$*
