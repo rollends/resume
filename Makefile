@@ -1,5 +1,4 @@
-RESUME = rs2dsouz_CV.pdf rs2dsouz_Teaching_CV.pdf
-# rs2dsouz_IndustryResearch.pdf
+RESUME = rs2dsouz_CV.pdf rs2dsouz_Industry_CV.pdf rs2dsouz_Teaching_CV.pdf
 BUILD_DIR = build
 
 all: $(RESUME) spellcheck
@@ -15,8 +14,7 @@ $(BUILD_DIR)/%.built: Makefile
 	texfot lualatex -output-directory=$(BUILD_DIR)/$* $*.tex
 	cp $(BUILD_DIR)/$*/$@ $@
 
-spellcheck: spellcheck-rs2dsouz_CV spellcheck-rs2dsouz_Teaching_CV
-# spellcheck-rs2dsouz_IndustryResearch
+spellcheck: spellcheck-rs2dsouz_CV spellcheck-rs2dsouz_Teaching_CV spellcheck-rs2dsouz_Industry_CV
 
 spellcheck-%: %.tex
 	detex -lnw $< | hunspell -d en_CA -L > $@

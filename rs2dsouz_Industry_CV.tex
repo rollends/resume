@@ -1,0 +1,364 @@
+\documentclass[oneside, 10pt]{memoir}
+
+\usepackage{fontspec}
+\usepackage{soulutf8}
+\usepackage[%
+  usefilenames,%
+  RMstyle         = {Text},%
+  SSstyle         = {Text},%
+  TTstyle         = {Text},%
+  DefaultFeatures = {Ligatures = Common}%
+]{plex-otf}
+\setul{0.75ex}{0.4ex}
+\setulcolor{OrangeRed}
+
+\usepackage{tabularx}
+
+%---------------------------------------------------------------------
+% PDF STUFF
+%
+\usepackage[dvipsnames]{xcolor}
+\usepackage[
+  colorlinks,
+  urlcolor = WildStrawberry,
+]{hyperref}
+\usepackage{url}
+
+%
+%---------------------------------------------------------------------
+
+% --------------------------------------------------------------------
+% General Styling
+%
+\pagestyle{plain}
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+\setlength{\partopsep}{0.25em}
+
+\setheadfoot{0em}{1em}
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{1.5cm}{1.5cm}{*}
+\checkandfixthelayout
+%
+%---------------------------------------------------------------------
+
+% --------------------------------------------------------------------
+% Document
+% 
+
+\begin{document}
+
+% --------------------------------------------------------------------
+% Begin Resume
+%
+
+\pdfbookmark[0]{Rollen S. D'Souza's Resume}{resume}
+{\LARGE\textbf{Rollen S. D'Souza}}\\
+{\small\url{rollen.dsouza@uwaterloo.ca}~\textbullet~\href{https://github.com/rollends}{\texttt{github.com/rollends}}~\textbullet~\href{https://rollends.ca}{\texttt{rollends.ca}} }\\
+\rule{\linewidth}{0.4pt}
+
+% \vskip 1em
+% \pdfbookmark[1]{Teaching Experience}{teaching}
+% \ul{\Large\textbf{teaching experience}}
+% \vskip 0.25em
+% \emph{Rollen is an award-winning teaching assistant, lab and course instructor that is highly rated by his students, peers and colleagues alike.}
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%   \begin{center}{\large \textbf{course instructor}}\end{center}
+%   \vskip 0.5em
+%   \begin{tabularx}{\linewidth}{p{6em}p{6em}Xp{14em}}
+%     Winter 2022 & \texttt{ECE380} & Analog Control Sys. & Student's Review 3.30/5.00\\
+%     Fall 2021 & \texttt{SE380} & Intro. to Control & Student's Review 4.16/5.00
+%   \end{tabularx}
+% \end{adjustwidth}
+
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%   \begin{center}{\large \textbf{lab instructor}}\end{center}
+%   \vskip 0.5em
+%   \begin{tabularx}{\linewidth}{p{6em}p{6em}Xp{14em}}
+%     Fall 2020 & \texttt{SE380} & Intro. to Control & Student's Review 4.93/5.00\\
+%     Spring 2020 & \texttt{SE380} & Intro. to Control & Student's Review 4.97/5.00\\
+%     Winter 2019 & \texttt{SE350} & Intro. to Operating Sys.  & Student's Review 4.95/5.00
+%   \end{tabularx}
+% \end{adjustwidth}
+
+% \vskip 0.75em
+% \pagebreak
+% \begin{adjustwidth}{1em}{0em}%
+%   \begin{center}{\large \textbf{teaching assistant}}\end{center}
+%   \vskip 0.5em
+%   \begin{tabularx}{\linewidth}{p{6em}p{6em}Xp{14em}}
+%     Winter 2021 & \texttt{MATH213} & Signals and Systems &  Student's Review 4.95/5.00\\
+%     Winter 2020 & \texttt{ECE380} & Intro. to Control &  Student's Review 4.94/5.00\\
+%     Fall 2019 & \texttt{SE380} & Intro. to Control &  Student's Review 4.63/5.00\\
+%     Spring 2019 & \texttt{ECE351} & Intro. to Compilers &  Student's Review 4.93/5.00\\
+%     Fall 2018 & \texttt{SE380} & Intro. to Control &  Student's Review 4.89/5.00\\
+%     Spring 2018 & \texttt{MATH213} & Signals and Systems &  Student's Review 4.69/5.00\\
+%     Winter 2018 & \texttt{ECE459} & Programming for Perf. &  Student's Review 4.62/5.00\\
+%     Fall 2017 & \texttt{SE101} & Intro. to Software Eng. &  Student's Review 4.86/5.00\\
+%     Winter 2017 & \texttt{SE465} & Soft. QA, Test. and Maint. & \\
+%     Fall 2016 & \texttt{SE101} & Intro. to Software Eng. & Student's Review 4.76/5.00\\
+%   \end{tabularx}
+% \end{adjustwidth}
+
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%   \begin{center}{\large \textbf{other positions}}\end{center}
+%   \vskip 0.5em
+%   \begin{tabularx}{\linewidth}{p{6em}lX}
+%     1 Year & \textbf{Student Advisor} & UW's Autonomous Racing Group (WATORACE)\\
+%     2 Years & \textbf{Report Grader} & Soft. Eng. Work Term Reports\\
+%     2 Years & \textbf{Mentor} & Soft. Eng. First-Year Mentor \\
+%   \end{tabularx}
+% \end{adjustwidth}
+
+% \vskip 1em
+% \pdfbookmark[1]{Academic Service}{academic}
+% \ul{\Large\textbf{academic service}}
+% \vskip 0.25em
+% \emph{Rollen is excited to participate in the academic community locally and globally.}
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%   \begin{tabularx}{\linewidth}{lX}
+%     \textbf{Reviewer} & 2024 IEEE Transactions on Control Systems Technology \\
+%     \textbf{Reviewer} & 2024 American Control Conference \\
+%     \textbf{Reviewer} & 2023 American Control Conference \\
+%     \textbf{Reviewer} & 2022 Automatica \\
+%     \textbf{Reviewer} & 2022 American Control Conference \\
+%     \textbf{Reviewer} & 2022 MDPI Aerospace \\
+%     \textbf{Reviewer} & 2021 Control Conference Africa \\
+%     \textbf{Reviewer} & 2021 American Control Conference \\
+%     \textbf{Reviewer} & 2020 American Control Conference \\
+%     \textbf{Student Member} & 2016 UW Software Engineering Curriculum Committee
+%   \end{tabularx}
+% \end{adjustwidth}
+
+\vskip 1em
+\ul{\Large\textbf{industry experience}}
+\vskip 0.25em
+\emph{Rollen has work experience using a wide-range of technical skills in the software engineering field.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \textbf{Member of Technical Staff}, \emph{MDA Space Ltd.}.\hfill {May 2022--Current}
+  \begin{adjustwidth}{1em}{0em}%
+    \begin{itemize}
+      \item{Technical lead for the AI-enabled, \textbf{motion planning} software component in service to the ground-segment, mission planning software used on CanadArm 3; the primary robotic system on the Gateway space station.}
+      \item{Guided and supervised a graduate student co-op project investigating the use of variational auto-encoders and related \textbf{neural networks} in accelerating modern path planning algorithms.}
+      \item{Mentored team of intermediate, junior and intern staffers in the ``from-the-ground-up'' development of \textbf{sample-based, motion planning algorithms} in C++17.}
+      \item{Performed analysis of CanadArm 2, payload hand-off operations on the International Space Station.}
+      \item{Developed and maintained supporting visualization tools in C++11 and analysis tools in \textbf{Python} (\texttt{numpy}, \texttt{scipy}).}
+    \end{itemize}
+  \end{adjustwidth}
+  \vskip 0.75em
+
+  \textbf{Medical Software Developer Co-op}, \emph{Sunnybrook Health Sciences Centre}.\hfill {Sep 2015--Dec 2015}
+  \begin{adjustwidth}{1em}{0em}%
+    \begin{itemize}
+      \item{Contributed to the development of a cardiac intervention visualization software written in \textbf{C++} \& QT targeting Linux and Windows platforms.}
+      \item{Investigated use novel input methods (Myo) for interactive visualization during medical interventions.}
+    \end{itemize}
+  \end{adjustwidth}
+
+  \vskip 0.75em
+  \textbf{Software Development Engineer Co-op}, \emph{The Coalition Studio, Microsoft Games}.\hfill {May 2014--Aug 2015}
+  \begin{adjustwidth}{1em}{0em}%
+    \begin{itemize}
+      \item{Developed rendering shaders and other tools for use in reporting video game memory consumption in real-time.}
+      \item{Created a background loader for the Unreal Game Engine 4 and participated in other edits to the game engine for use in Gears of War.}
+      \item{Developed tools to automate import corrections made to skeletal mesh data.}
+      \item{Contributed to \emph{Gears of War 3: Ultimate Edition} and \emph{Gears of War 4} Xbox One video games.}
+    \end{itemize}
+  \end{adjustwidth}
+
+%   \vskip 0.75em
+%   \textbf{Software Engineer Co-op}, \emph{Kaleidescape}.\hfill
+%   \begin{adjustwidth}{1em}{0em}%
+%     \begin{itemize}
+%       \item{Developed Java EE code and SQL scripts that acquired review information, useful to parents, about new, popular movies and incorporated the data into a database.}
+%     \end{itemize}
+%   \end{adjustwidth}
+
+%   \vskip 0.75em
+%   \textbf{Multimedia Software Developer}, \emph{University of Waterloo}.\hfill
+%   \begin{adjustwidth}{1em}{0em}%
+%     \begin{itemize}
+%       \item{Developed video conferencing software with an editable whiteboard using a Flash front-end and a Java EE back-end for the purpose of remote education.}
+%     \end{itemize}
+%   \end{adjustwidth}
+
+%   \vskip 0.75em
+%   \textbf{Computer Camp Course Instructor}, \emph{Computer Camp for Kids, TCET}.\hfill
+%   \begin{adjustwidth}{1em}{0em}%
+%     \begin{itemize}
+%       \item{Developed and delivered course material on programming in Java, C\# and P-BASIC targeted towards youth. }
+%     \end{itemize}
+%   \end{adjustwidth}
+\end{adjustwidth}
+
+
+\vskip 1em
+\pdfbookmark[1]{Publications}{pubs}
+\ul{\Large\textbf{publications}}
+\vskip 0.25em
+\emph{Rollen is a published nonlinear control theorist with demonstrably strong experience developing theory for algorithmic control design as well as analyzing and implementing real control systems.}
+
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \begin{center}{\large \textbf{journal}}\end{center}
+  \vskip 0.5em
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{An Algorithm for Local Transverse Feedback Linearization}, SIAM J. Control Optim., vol. 61, no. 3, 2023. pp. 1248--1272. [\href{https://doi.org/10.1137/21M1444588}{Published}, \href{https://doi.org/10.1137/21M1444588}{arXiv:2109.00641} \texttt{\small[math.OC]}]\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Path Following Control Design for a Gliding Missile}, {IEEE} Trans. Aerosp. Electron. Syst., 2021. [\href{https://doi.org/10.1109/TAES.2021.3111785}{Published}]\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{An Exterior Differential Characterization of Single-Input Local Transverse Feedback Linearization}, Automatica, vol. 127, 2021. pp. 109493. [\href{https://doi.org/10.1016/j.automatica.2021.109493}{Published}]\\[1em]
+  \textbf{R. S. D'Souza}, R. Louwers and C. Nielsen, \emph{Piecewise Linear Path Following for a Unicycle using Transverse Feedback Linearization}, {IEEE} Trans. Control Syst. Technol., 2021. [\href{https://doi.org/10.1109/TCST.2021.3049715}{Published}]
+\end{adjustwidth}
+
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \begin{center}{\large \textbf{conference}}\end{center}
+  \vskip 0.5em
+  \textbf{R. S. D'Souza}, \emph{Discrete-Time Transverse Feedback Linearization}, 2023 American Control Conference (ACC), 2023, pp. 258--263. [\href{https://doi.org/10.23919/ACC55779.2023.10156159}{Published}]\hfill\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Piecewise Linear Path Following for a Unicycle using Transverse Feedback Linearization}, 2020 American Control Conference (ACC), 2020, pp. 5250--5255. [\href{https://doi.org/10.23919/ACC45564.2020.9147473}{Published}]\hfill\\[1em]
+  \textbf{R. S. D'Souza} and C. Nielsen, \emph{Dual Conditions for Local Transverse Feedback Linearization}, 2018 IEEE Conference on Decision and Control (CDC), 2018, pp. 2983--2943. [\href{https://doi.org/10.1109/CDC.2018.8619815}{Published}]\hfill\\[1em]
+  V. Joukov, \textbf{R. D'Souza} and D. Kuli\'{c}, \emph{Human pose estimation from imperfect sensor data via the Extended Kalman Filter}, 2016 International Symposium on Experimental Robotics, 2016. pp. 789--798. [\href{https://doi.org/10.1007/978-3-319-50115-4_68}{Published}]
+\end{adjustwidth}
+
+
+% \vskip 1em
+% \pdfbookmark[1]{Funding}{funding}
+% \ul{\Large\textbf{funding}}
+% \vskip 0.25em
+% \emph{Rollen has acquired competitive funding.}
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%     \begin{tabularx}{\linewidth}{lXr}
+%         2021 & Ontario Graduate Scholarship & \$15,000\\
+%         2020 & QEII Graduate Scholarship in Science and Technology & \$15,000\\
+%         2016    &   NSERC Undergraduate Student Research Assistantship (USRA) & \$4,000\\
+%         2015    &   NSERC Undergraduate Student Research Assistantship (USRA) & \$4,000
+%     \end{tabularx}
+% \end{adjustwidth}
+
+% \vskip 1em
+% \pdfbookmark[1]{Honours and Awards}{awards}
+% \ul{\Large\textbf{honours and awards}}
+% \vskip 0.25em
+% \emph{Rollen is well-recognized for his passion in his work and teaching.}
+% \vskip 0.75em
+% \begin{adjustwidth}{1em}{0em}%
+%     \begin{tabularx}{\linewidth}{lX}
+%         2021    &   Amit and Meena Chakma Award for Exceptional Teaching by a Student\\
+%         2018    &   Award for Teaching Assistantship Excellence\\
+%         2018    &   ECE Teaching Assistant Award\\
+%         2016    &   General Motors (GM) Innovation Award \\
+%         2014    &   International Genetically Engineered Machine (iGEM) Competition \textemdash~Best Model \\
+%         2011    &   University of Waterloo President's Scholarship \\
+%     \end{tabularx}
+% \end{adjustwidth}
+
+\vskip 1em
+\pdfbookmark[1]{Memberships}{members}
+\ul{\Large\textbf{memberships}}
+\vskip 0.25em
+\emph{Rollen is interested in acquiring memberships relevant to his field and contributing to his community.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \begin{tabularx}{\linewidth}{lX}
+    \textbf{E.I.T.} & Professional Engineers Ontario (PEO)\\
+    \textbf{Member} & Institute of Electrical and Electronics Engineers (IEEE)\\
+    \textbf{Member} & Society of Industrial and Applied Mathematicians (SIAM)\\
+    \textbf{Member} & Canadian Owners and Pilots Association (COPA)
+  \end{tabularx}
+\end{adjustwidth}
+
+\vskip 1em
+\pdfbookmark[1]{Other Activities}{other}
+\ul{\Large\textbf{other activities}}
+\vskip 0.25em
+\emph{Rollen is a unique individual with a variety of interests. Get to know a little about me here!}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \begin{tabular}{ll}
+    2017--2022 & {Licensed \textbf{Private Pilot (PPL)}}\\
+    2018--2020 & {Software Engineering \textbf{First-Year Student Mentor}}\\
+    2015--2016 & {Member of \textbf{Software Engineering Curriculuum Committee}}\\
+    2015--2015 & {\textbf{Math Modeller} UW's iGEM Student Team}\\
+    2015--2015 & {\textbf{Volunteer First Aider}, Campus Response Team, FEDS, UW}
+  \end{tabular}
+\end{adjustwidth}
+    % \entryGeneral{2018/09\textemdash Present}{Software Engineering Mentor}
+    % {University of Waterloo, Program of Software Engineering}{
+    %     Part-time mentor for first year Software Engineering students in all courses that are deemed at need for a student.
+    % }
+
+    % \entryGeneral{2015/09\textemdash 2016/04}{Software Engineering Curriculuum Committee Student Representative}
+    % {University of Waterloo, Program of Software Engineering}{
+    %     Represented student body on matters regarding curriculuum changes for future classes of Software Engineering.
+    % }
+
+    % \entryGeneral{2015/01\textemdash 2015/12}{Math Modeller}
+    % {International Genetically Engineered Machine (iGEM) Competition - Team Waterloo} {
+    %     Developed and analyzed mathematical models of the CRISPR-mRNA interference mechanism alongside
+    %     interdisciplinary team of mathematics, physics, engineering and biology undergraduate students.
+    %     Main contribution consisted of performing global sensitivity analysis.
+    % }
+
+    % \entryGeneral{2015/01\textemdash 2015/12}{Volunteer First Responder}{Campus Response Team, FEDS} {
+    %     Provided first aid services at student events and the student activity complex. 
+    %     Certified Standard First Aid/CPR-HCP.
+    % }
+
+\vskip 1em
+\pdfbookmark[1]{Projects}{projects}
+\ul{\Large\textbf{projects}}
+\vskip 0.25em
+\emph{Rollen likes to write code. Here is an excerpt of interesting projects Rollen has worked on over the years. All projects listed here can either be found in his Github profile, or the source code can be requested.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \textbf{BurritOS: A Real Time Operating System} [\href{https://github.com/rollends/burritOSPrivate}{Github}]\hfill
+  \begin{adjustwidth}{1em}{0em}
+    Implemented (hard) real time operating system with message passing in C, from the ground up, for the purpose of autonomously managing trains on a physical track.
+  \end{adjustwidth}
+  \vskip 0.75em
+
+  \textbf{Red Prism: Reddit Graph Analyzer} [\href{https://github.com/rollends/red-prism}{Github}]\hfill
+  \begin{adjustwidth}{1em}{0em}
+    Python project that downloads Reddit public post \& user information and analyzes the graph relationships present in a community to identify ``popular'' or ``interesting'' content.
+  \end{adjustwidth}
+  \vskip 0.75em
+
+  \textbf{Lua on Serious Threads (LoST)} [\href{https://github.com/rollends/lost}{Github}]\hfill
+  \begin{adjustwidth}{1em}{0em}
+    Allows for many Lua tasks to be performed in parallel on a number of kernel-level worker threads.
+    Task execution is interleaved by modifying the Lua 5.3.4 runtime to support the interruption of a Lua task at pre-defined intervals.
+  \end{adjustwidth}
+  \vskip 0.75em
+  \textbf{Implementation of Transverse Feedback Linearizing Controllers} [\href{https://github.com/rollends/SE499}{Github}]\hfill
+  \begin{adjustwidth}{1em}{0em}
+    Undergraduate research project investigating two different implementations of path following controllers and their practicality in terms of performance and numerical precision.
+  \end{adjustwidth}
+\end{adjustwidth}
+
+\vskip 1em
+\pdfbookmark[1]{Education}{education}
+\ul{\Large\textbf{education}}
+\vskip 0.25em
+\emph{Rollen is a software engineer turned control theorist and roboticist.}
+\vskip 0.75em
+\begin{adjustwidth}{1em}{0em}%
+  \textbf{Doctor of Philosophy} in Electrical and Computer Engineering\hfill\\
+  University of Waterloo\\
+  Thesis: Algorithmic Transverse Feedback Linearization.\\
+  Supervisor: Prof. Christopher Nielsen.
+  \vskip 0.75em
+
+  \textbf{Bachelor of Software Engineering} (June 2017)\hfill\\
+  Honours Software Engineering\\
+  Joint Honours Applied Mathematics\\
+  University of Waterloo.
+\end{adjustwidth}
+
+\end{document}
